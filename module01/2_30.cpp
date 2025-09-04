@@ -1,10 +1,9 @@
 // Module 01 Chapter 02 Exercise 2.30
-// Create a BMI calculator application that reads the user’s weight in pounds 
-// and height in inches, then calculates and displays the user’s body mass index. 
-// Also, the application should display the following information from 
-// the Department of Health and Human Services/National Institutes of Health 
+// Create a BMI calculator application that reads the user’s weight in pounds
+// and height in inches, then calculates and displays the user’s body mass index.
+// Also, the application should display the following information from
+// the Department of Health and Human Services/National Institutes of Health
 // so the user can evaluate his/her BMI
-
 
 #include <iostream> // allow access to input/output streams
 
@@ -23,6 +22,9 @@ int main() {
     int weight_lbs;
     int height_inches;
 
+    // constant factor for converting formula to use imperial units
+    const int BMI_IMPERIAL_CONVERSION_FACTOR = 703;
+
     // prompt for and assign user input to variables
     cout << "Enter height in inches: ";
     cin >> height_inches;
@@ -30,9 +32,9 @@ int main() {
     cin >> weight_lbs;
 
     // calculate bmi as a whole number using integer division
-    int bmi = (weight_lbs * 703) / (height_inches * height_inches);
+    int bmi = (weight_lbs * BMI_IMPERIAL_CONVERSION_FACTOR) /
+              (height_inches * height_inches);
 
     // disply bmi
     cout << "The calculated BMI is " << bmi << endl;
-
 }
