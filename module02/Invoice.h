@@ -10,8 +10,8 @@ class Invoice {
   private:
     std::string part_number;      // data member for part number
     std::string part_description; // data member for part description
-    int quantity;                 // data member for quantity
-    int price_per_item;           // data member for price
+    int quantity{0};              // data member for quantity
+    int price_per_item{0};        // data member for price
 
   public:
     // constructor

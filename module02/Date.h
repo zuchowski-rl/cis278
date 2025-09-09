@@ -6,9 +6,9 @@
 class Date {
 
   private:
-    int year;  // data member containing the year value
-    int month; // data member containing the month value
-    int day;   // data member containing the day value
+    int year{1970}; // data member containing the year value
+    int month{1};   // data member containing the month value
+    int day{1};     // data member containing the day value
 
   public:
     // constructor
