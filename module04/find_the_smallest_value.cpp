@@ -8,10 +8,6 @@ int main() {
     // count of values to process
     int value_count{0};
 
-    // holds values to process, initialized on user input of first value
-    int current_value;
-    int smallest_value;
-
     // prompt for and validate the count of values to process
     while (value_count < 1) {
         std::cout << "Enter the count of values to process: ";
@@ -22,10 +18,14 @@ int main() {
         }
     }
 
-    // read the first value and initialize smallest_value
+    // holds values to process
+    int current_value; // no meaningful default
+    // read the first value
     std::cout << "Enter value 1: ";
     std::cin >> current_value;
-    smallest_value = current_value;
+
+    // declare and initialize smallest_value
+    int smallest_value = current_value;
 
     // prompt for and update current_value until value_count is reached
     for (int i = 1; i < value_count; ++i) {
