@@ -8,29 +8,29 @@
 
 // function to lookup price based on product number
 double lookup_price(int product_number) {
-
-    double price{0.0};
+    // price constants
+    constexpr double default_price = 0.0;
+    constexpr double product_1_price = 2.98;
+    constexpr double product_2_price = 4.50;
+    constexpr double product_3_price = 9.98;
+    constexpr double product_4_price = 4.49;
+    constexpr double product_5_price = 6.87;
 
     switch (product_number) {
         case 1:
-            price = 2.98;
-            break;
+            return product_1_price;
         case 2:
-            price = 4.50;
-            break;
+            return product_2_price;
         case 3:
-            price = 9.98;
-            break;
+            return product_3_price;
         case 4:
-            price = 4.49;
-            break;
+            return product_4_price;
         case 5:
-            price = 6.87;
-            break;
+            return product_5_price;
         default:
             std::cout << "Invalid product number." << std::endl;
+            return default_price;
     }
-    return price;
 }
 
 int main() {
