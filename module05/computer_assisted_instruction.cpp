@@ -95,7 +95,7 @@ int main() {
     srand(static_cast<unsigned int>(time(0)));
 
     // declare variables to hold factors for question
-    int factor_1, factor_2;
+    int factor_1{0}, factor_2{0};
     // randomize the factors
     generate_question(factor_1, factor_2);
 
