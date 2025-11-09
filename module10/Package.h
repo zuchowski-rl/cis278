@@ -23,8 +23,8 @@ class Package {
     std::string recipient_zip;
 
     // package info
-    double weight_oz;   // in ounces
-    double cost_per_oz; // cost per ounce
+    double weight_oz{0.0};   // in ounces
+    double cost_per_oz{0.0}; // cost per ounce
 
     // label width for printing package info
     static constexpr int LABEL_WIDTH{30};

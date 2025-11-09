@@ -10,7 +10,7 @@
 // derived class for overnight packages
 class OvernightPackage : public Package {
   private:
-    double extra_fee_per_oz;
+    double extra_fee_per_oz{0.0};
 
   public:
     OvernightPackage(const std::string &sender_name, const std::string &sender_address,

@@ -10,7 +10,7 @@
 // derived class for two day packages
 class TwoDayPackage : public Package {
   private:
-    double flat_fee;
+    double flat_fee{0.0};
 
   public:
     TwoDayPackage(const std::string &sender_name, const std::string &sender_address,
