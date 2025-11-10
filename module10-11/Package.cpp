@@ -34,6 +34,40 @@ double Package::calculate_cost() const {
     return weight_oz * cost_per_oz;
 }
 
+// sender info getters
+const std::string &Package::get_sender_name() const {
+    return sender_name;
+}
+const std::string &Package::get_sender_address() const {
+    return sender_address;
+}
+const std::string &Package::get_sender_city() const {
+    return sender_city;
+}
+const std::string &Package::get_sender_state() const {
+    return sender_state;
+}
+const std::string &Package::get_sender_zip() const {
+    return sender_zip;
+}
+
+// recipient info getters
+const std::string &Package::get_recipient_name() const {
+    return recipient_name;
+}
+const std::string &Package::get_recipient_address() const {
+    return recipient_address;
+}
+const std::string &Package::get_recipient_city() const {
+    return recipient_city;
+}
+const std::string &Package::get_recipient_state() const {
+    return recipient_state;
+}
+const std::string &Package::get_recipient_zip() const {
+    return recipient_zip;
+}
+
 // // print package details
 void Package::print_details() const {
     std::cout << std::fixed << std::setprecision(2);

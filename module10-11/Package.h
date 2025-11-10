@@ -40,6 +40,20 @@ class Package {
     virtual ~Package() {
     }
 
+    // sender info getters
+    const std::string &get_sender_name() const;
+    const std::string &get_sender_address() const;
+    const std::string &get_sender_city() const;
+    const std::string &get_sender_state() const;
+    const std::string &get_sender_zip() const;
+
+    // recipient info getters
+    const std::string &get_recipient_name() const;
+    const std::string &get_recipient_address() const;
+    const std::string &get_recipient_city() const;
+    const std::string &get_recipient_state() const;
+    const std::string &get_recipient_zip() const;
+
     virtual double calculate_cost() const;
     virtual void print_details() const;
 };
