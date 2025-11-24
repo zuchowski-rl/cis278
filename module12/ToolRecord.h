@@ -5,10 +5,10 @@
 // class representing a single tool record
 class ToolRecord {
   public:
-    int id;
-    char name[50];
-    int quantity;
-    double cost;
+    int id{0};
+    char name[50]{};
+    int quantity{0};
+    double cost{0.0};
 
     ToolRecord();
     ToolRecord(int id, const std::string &name, int quantity, double cost);
