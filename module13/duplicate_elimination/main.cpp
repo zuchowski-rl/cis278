@@ -1,5 +1,5 @@
 // get 20 intergers from user
-// remove duplicates using unique and copy algorithms
+// remove duplicates using unique_copy algorithm
 // display unique values
 
 #include <algorithm>
@@ -7,7 +7,7 @@
 #include <iostream>
 #include <vector>
 
-// class for eliminating duplicate integers using unique
+// class for eliminating duplicate integers using unique_copy
 class Deduplicator {
   private:
     std::array<int, 20> user_input; // array to store user input
@@ -22,15 +22,12 @@ class Deduplicator {
     }
 
     void deduplicate() {
-        // sort input first for unique algorithm
+        // sort input first for unique_copy algorithm
         std::sort(user_input.begin(), user_input.end());
 
-        // apply unique algorithm
-        auto unique_end = std::unique(user_input.begin(), user_input.end());
-
-        // copy unique elements into unique_values vector
+        // directly copy unique elements into unique_values vector using unique_copy
         unique_values.clear(); // ensure vector is empty
-        std::copy(user_input.begin(), unique_end, std::back_inserter(unique_values));
+        std::unique_copy(user_input.begin(), user_input.end(), std::back_inserter(unique_values));
 
         // print header for results
         std::cout << "Unique values: ";
