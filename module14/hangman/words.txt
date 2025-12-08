@@ -1,0 +1,8 @@
+car
+tree
+apple
+banana
+picture
+triangle
+xylophone
+aberration
